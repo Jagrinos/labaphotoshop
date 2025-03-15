@@ -32,13 +32,14 @@
             AddImageButton = new Button();
             FlowPanelImages = new FlowLayoutPanel();
             InfoText = new Label();
+            Modes = new GroupBox();
             ((System.ComponentModel.ISupportInitialize)MainPicture).BeginInit();
             SuspendLayout();
             // 
-            // MainPicture
+            // _mainPicture
             // 
             MainPicture.Location = new Point(6, 6);
-            MainPicture.Name = "MainPicture";
+            MainPicture.Name = "_mainPicture";
             MainPicture.Size = new Size(912, 804);
             MainPicture.TabIndex = 0;
             MainPicture.TabStop = false;
@@ -53,30 +54,40 @@
             AddImageButton.UseVisualStyleBackColor = true;
             AddImageButton.Click += AddImageButton_Click;
             // 
-            // FlowPanelImages
+            // _flowPanelImages
             // 
-            FlowPanelImages.Location = new Point(939, 6);
-            FlowPanelImages.Name = "FlowPanelImages";
-            FlowPanelImages.Size = new Size(411, 715);
+            FlowPanelImages.Location = new Point(939, 54);
+            FlowPanelImages.Name = "_flowPanelImages";
+            FlowPanelImages.Size = new Size(411, 675);
             FlowPanelImages.TabIndex = 3;
             // 
-            // InfoText
+            // _infoText
             // 
             InfoText.AutoSize = true;
             InfoText.Font = new Font("Segoe UI", 12F);
             InfoText.ForeColor = Color.Chocolate;
             InfoText.Location = new Point(939, 741);
-            InfoText.Name = "InfoText";
+            InfoText.Name = "_infoText";
             InfoText.Size = new Size(362, 21);
             InfoText.TabIndex = 4;
             InfoText.Text = "loremhfghfgddfghdfghghfdgfdhdgfhdfghfdghdfgh";
             InfoText.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // Modes
+            // 
+            Modes.Location = new Point(940, 6);
+            Modes.Name = "Modes";
+            Modes.Size = new Size(410, 42);
+            Modes.TabIndex = 5;
+            Modes.TabStop = false;
+            Modes.Text = "Mode";
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1376, 837);
+            Controls.Add(Modes);
             Controls.Add(InfoText);
             Controls.Add(FlowPanelImages);
             Controls.Add(AddImageButton);
@@ -94,5 +105,6 @@
         private Button AddImageButton;
         private FlowLayoutPanel FlowPanelImages;
         private Label InfoText;
+        private GroupBox Modes;
     }
 }

@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace labaphotoshop
+namespace labaphotoshop.layers
 {
-    internal class Image
+    internal class LayersImage
     {
         public static void DrawWithModeByte(Bitmap formingImage, Bitmap workingImage, float opacity, string MODE)
         {
@@ -39,7 +39,7 @@ namespace labaphotoshop
                         byte workingG = workingPtr[workingIndex + 1];
                         byte workingR = workingPtr[workingIndex + 2];
                         //byte workingA = workingPtr[workingIndex + 3];
-                        
+
                         switch (MODE)
                         {
                             case "Sum":
@@ -48,9 +48,9 @@ namespace labaphotoshop
                                 formingPtr[formingIndex + 2] = ClampByte((int)(formingR * (1 - opacity) + workingR * opacity), 0, 255); // R
                                 break;
                             case "Multiply":
-                                formingPtr[formingIndex] = ClampByte((int)((formingB * workingB * opacity) % 255), 0, 255); // B
-                                formingPtr[formingIndex + 1] = ClampByte((int)((formingG * workingG * opacity) % 255), 0, 255); // G
-                                formingPtr[formingIndex + 2] = ClampByte((int)((formingR * workingR * opacity) % 255), 0, 255); // R
+                                formingPtr[formingIndex] = ClampByte((int)(formingB * workingB * opacity % 255), 0, 255); // B
+                                formingPtr[formingIndex + 1] = ClampByte((int)(formingG * workingG * opacity % 255), 0, 255); // G
+                                formingPtr[formingIndex + 2] = ClampByte((int)(formingR * workingR * opacity % 255), 0, 255); // R
                                 break;
                             case "Difference":
                                 formingPtr[formingIndex] = ClampByte((int)(formingB - workingB * opacity), 0, 255); // B
@@ -72,9 +72,9 @@ namespace labaphotoshop
 
         private static byte ClampByte(int val, int min, int max)
         {
-            if (val < min) return (byte) min;
-            else if (val > max) return (byte) max;
-                 else return (byte) val;
+            if (val < min) return (byte)min;
+            else if (val > max) return (byte)max;
+            else return (byte)val;
         }
 
 

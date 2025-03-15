@@ -14,3 +14,4 @@ D:\progers\vsreal\labaphotoshop\obj\Debug\net9.0-windows\refint\labaphotoshop.dl
 D:\progers\vsreal\labaphotoshop\obj\Debug\net9.0-windows\labaphotoshop.pdb
 D:\progers\vsreal\labaphotoshop\obj\Debug\net9.0-windows\labaphotoshop.genruntimeconfig.cache
 D:\progers\vsreal\labaphotoshop\obj\Debug\net9.0-windows\ref\labaphotoshop.dll
+D:\progers\vsreal\labaphotoshop\obj\Debug\net9.0-windows\labaphotoshop.sourcelink.json
