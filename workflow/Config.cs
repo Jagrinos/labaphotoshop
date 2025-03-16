@@ -12,5 +12,6 @@ namespace labaphotoshop.workflow
         internal const string CloseIcon = "D:\\progers\\vsreal\\labaphotoshop\\images\\closeicon.png";
         internal const string DownIcon = "D:\\progers\\vsreal\\labaphotoshop\\images\\downicon.png";
         internal const string UpIcon = "D:\\progers\\vsreal\\labaphotoshop\\images\\upicon.png";
+        internal const int HistogramHeight = 320;
     }
 }

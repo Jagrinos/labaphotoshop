@@ -36,17 +36,17 @@
             ((System.ComponentModel.ISupportInitialize)MainPicture).BeginInit();
             SuspendLayout();
             // 
-            // _mainPicture
+            // MainPicture
             // 
             MainPicture.Location = new Point(6, 6);
-            MainPicture.Name = "_mainPicture";
+            MainPicture.Name = "MainPicture";
             MainPicture.Size = new Size(912, 804);
             MainPicture.TabIndex = 0;
             MainPicture.TabStop = false;
             // 
             // AddImageButton
             // 
-            AddImageButton.Location = new Point(1048, 774);
+            AddImageButton.Location = new Point(1018, 789);
             AddImageButton.Name = "AddImageButton";
             AddImageButton.Size = new Size(260, 36);
             AddImageButton.TabIndex = 2;
@@ -54,20 +54,20 @@
             AddImageButton.UseVisualStyleBackColor = true;
             AddImageButton.Click += AddImageButton_Click;
             // 
-            // _flowPanelImages
+            // FlowPanelImages
             // 
             FlowPanelImages.Location = new Point(939, 54);
-            FlowPanelImages.Name = "_flowPanelImages";
-            FlowPanelImages.Size = new Size(411, 675);
+            FlowPanelImages.Name = "FlowPanelImages";
+            FlowPanelImages.Size = new Size(400, 700);
             FlowPanelImages.TabIndex = 3;
             // 
-            // _infoText
+            // InfoText
             // 
             InfoText.AutoSize = true;
             InfoText.Font = new Font("Segoe UI", 12F);
             InfoText.ForeColor = Color.Chocolate;
-            InfoText.Location = new Point(939, 741);
-            InfoText.Name = "_infoText";
+            InfoText.Location = new Point(969, 765);
+            InfoText.Name = "InfoText";
             InfoText.Size = new Size(362, 21);
             InfoText.TabIndex = 4;
             InfoText.Text = "loremhfghfgddfghdfghghfdgfdhdgfhdfghfdghdfgh";
@@ -77,7 +77,7 @@
             // 
             Modes.Location = new Point(940, 6);
             Modes.Name = "Modes";
-            Modes.Size = new Size(410, 42);
+            Modes.Size = new Size(400, 42);
             Modes.TabIndex = 5;
             Modes.TabStop = false;
             Modes.Text = "Mode";

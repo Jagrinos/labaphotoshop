@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("labaphotoshop")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+3f116816928f4d265bc98a3bb96f8a483d6a020a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+4a4f6bde39c65145453a4222cd9a7b241be793b4")]
 [assembly: System.Reflection.AssemblyProductAttribute("labaphotoshop")]
 [assembly: System.Reflection.AssemblyTitleAttribute("labaphotoshop")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
