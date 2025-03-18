@@ -8,10 +8,11 @@ namespace labaphotoshop.workflow
 {
     internal class Config
     {
-        internal const string DefImgPath = "D:\\progers\\vsreal\\labaphotoshop\\images\\default.png";
-        internal const string CloseIcon = "D:\\progers\\vsreal\\labaphotoshop\\images\\closeicon.png";
-        internal const string DownIcon = "D:\\progers\\vsreal\\labaphotoshop\\images\\downicon.png";
-        internal const string UpIcon = "D:\\progers\\vsreal\\labaphotoshop\\images\\upicon.png";
+        internal static readonly string BasePath = AppDomain.CurrentDomain.BaseDirectory;
+        internal static readonly string DefImgPath = Path.Combine(BasePath, "images", "default.png");
+        internal static readonly string CloseIcon = Path.Combine(BasePath, "images", "closeicon.png");
+        internal static readonly string DownIcon = Path.Combine(BasePath, "images", "downicon.png");
+        internal static readonly string UpIcon = Path.Combine(BasePath, "images", "upicon.png");
         internal const int HistogramHeight = 320;
     }
 }

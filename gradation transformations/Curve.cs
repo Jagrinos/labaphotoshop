@@ -44,6 +44,8 @@ namespace labaphotoshop.gradation_transformations
         }
         public void UpdateCurve()
         {
+            Task[] tasks = [Task.Run(() => CurveTransformation()), Task.Run(() => _histogram.UpdateHistogram())];
+           
             int width = _curveImg.Width;
             int height = _curveImg.Height;
             Bitmap curveimg = new(width, height, PixelFormat.Format32bppArgb);
@@ -66,26 +68,46 @@ namespace labaphotoshop.gradation_transformations
             }
 
             _curveImg.Image = curveimg;
-            CurveTransformation();
+            Task.WaitAll(tasks);
         }
 
         private void CurveTransformation()
         {
             var map = GenerateTransformMap();
 
-            int height = OriginImage.Height;
-            int width = OriginImage.Width;
-            var newImg = new Bitmap(width, height, PixelFormat.Format32bppArgb);
+            int countParts = 100;
+            var parts = Funcs.SplitImg(OriginImage, countParts);
+
+            var curveTasks = new Task[countParts];
+            for (int i = 0; i < countParts; i++) 
+            {
+                var index = i;
+                curveTasks[i] = Task.Run(() => {
+                    parts[index] = CurveUse(parts[index], map);
+                    });
+            }
+            Task.WaitAll(curveTasks);
+
+            _mainPicture.Image = Funcs.CombineImgs(parts);
+        }
+
+        private Bitmap CurveUse(Bitmap img, Dictionary<int, int> map)
+        {
+            int height = img.Height;
+            int width = img.Width;
+
+            Bitmap newImg = new (width, height, PixelFormat.Format32bppArgb);
 
             BitmapData formingData = newImg.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.ReadWrite, PixelFormat.Format32bppArgb);
-            BitmapData workingData = OriginImage.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
+            BitmapData workingData = img.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
 
             unsafe
             {
                 byte* formingPtr = (byte*)formingData.Scan0;
                 byte* workingPtr = (byte*)workingData.Scan0;
 
-                for (int y = 0; y < height; y++)
+                Parallel.For(0, height, y =>
+                {
                     for (int x = 0; x < width; x++)
                     {
                         int formingIndex = y * formingData.Stride + x * 4;
@@ -105,13 +127,13 @@ namespace labaphotoshop.gradation_transformations
                         formingPtr[formingIndex + 2] = (byte)newR;
                         formingPtr[formingIndex + 3] = 255;
                     }
+                });
             }
 
             newImg.UnlockBits(formingData);
-            OriginImage.UnlockBits(workingData);
+            img.UnlockBits(workingData);
 
-            _mainPicture.Image = newImg;
-            _histogram.UpdateHistogram();
+            return newImg;
         }
 
         private Dictionary<int, int> GenerateTransformMap()
@@ -135,8 +157,25 @@ namespace labaphotoshop.gradation_transformations
 
      private void CurveImg_MouseClick(object sender, MouseEventArgs e)
         {
-            _controlPoints.Add(new PointF(e.X, _curveImg.Height - e.Y));
-            _infoText.Text = "Create new point";
+            if (e.Button == MouseButtons.Left)
+            {
+                _controlPoints.Add(new PointF(e.X, _curveImg.Height - e.Y));
+                _infoText.Text = "Create new point";
+            }
+            else
+            {
+                foreach (var p in _controlPoints)
+                {
+                    var h = _curveImg.Height;
+                    if (Math.Abs(p.X - e.X) <= 20 && Math.Abs((h - p.Y) - (e.Y)) <= 20 && (p.X != 0 && p.Y != 0) && (p.X != 255 && p.Y != 255))
+                    {
+                        _isDragging = false;
+                        _controlPoints.Remove(p);
+                        _infoText.Text = "Point deleted";
+                        break;
+                    }
+                }
+            }
             UpdateCurve();
         }
 
@@ -145,7 +184,7 @@ namespace labaphotoshop.gradation_transformations
             foreach (var p in _controlPoints)
             {
                 var h = _curveImg.Height;
-                if (Math.Abs(p.X - e.X) <= 16 && Math.Abs((h - p.Y) - (e.Y)) <= 16 && (p.X != 0 && p.Y != 0) && (p.X != 255 && p.Y != 255))
+                if (Math.Abs(p.X - e.X) <= 20 && Math.Abs((h - p.Y) - (e.Y)) <= 20 && (p.X != 0 && p.Y != 0) && (p.X != 255 && p.Y != 255))
                 {
                     _isDragging = true;
                     _draggingPoint = p;
@@ -153,6 +192,8 @@ namespace labaphotoshop.gradation_transformations
                     break;
                 }
             }
+            UpdateCurve();
+
         }
         private void CurveImg_MouseMove(object sender, MouseEventArgs e)
         {

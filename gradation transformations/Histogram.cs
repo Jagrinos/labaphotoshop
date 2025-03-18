@@ -45,7 +45,9 @@ namespace labaphotoshop.gradation_transformations
             unsafe
             {
                 byte* ptr = (byte*)data.Scan0;
-                for (int y = 0; y < height; y++)
+
+                Parallel.For(0, height, y =>
+                {
                     for (int x = 0; x < width; x++)
                     {
                         int workingIndex = y * data.Stride + x * 4;
@@ -54,10 +56,25 @@ namespace labaphotoshop.gradation_transformations
                         byte G = ptr[workingIndex + 1];
                         byte R = ptr[workingIndex + 2];
 
-                        int brigtness = (R+ G + B) / 3;
+                        int brigtness = (R + G + B) / 3;
 
                         histogram[brigtness]++;
                     }
+                });
+
+                //for (int y = 0; y < height; y++)
+                //    for (int x = 0; x < width; x++)
+                //    {
+                //        int workingIndex = y * data.Stride + x * 4;
+
+                //        byte B = ptr[workingIndex];
+                //        byte G = ptr[workingIndex + 1];
+                //        byte R = ptr[workingIndex + 2];
+
+                //        int brigtness = (R+ G + B) / 3;
+
+                //        histogram[brigtness]++;
+                //    }
             }
             return histogram;
         }

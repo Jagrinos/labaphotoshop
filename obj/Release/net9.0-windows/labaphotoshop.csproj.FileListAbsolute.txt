@@ -1,0 +1,17 @@
+D:\progers\vsreal\labaphotoshop\bin\Release\net9.0-windows\labaphotoshop.exe
+D:\progers\vsreal\labaphotoshop\bin\Release\net9.0-windows\labaphotoshop.deps.json
+D:\progers\vsreal\labaphotoshop\bin\Release\net9.0-windows\labaphotoshop.runtimeconfig.json
+D:\progers\vsreal\labaphotoshop\bin\Release\net9.0-windows\labaphotoshop.dll
+D:\progers\vsreal\labaphotoshop\bin\Release\net9.0-windows\labaphotoshop.pdb
+D:\progers\vsreal\labaphotoshop\obj\Release\net9.0-windows\labaphotoshop.MainForm.resources
+D:\progers\vsreal\labaphotoshop\obj\Release\net9.0-windows\labaphotoshop.csproj.GenerateResource.cache
+D:\progers\vsreal\labaphotoshop\obj\Release\net9.0-windows\labaphotoshop.GeneratedMSBuildEditorConfig.editorconfig
+D:\progers\vsreal\labaphotoshop\obj\Release\net9.0-windows\labaphotoshop.AssemblyInfoInputs.cache
+D:\progers\vsreal\labaphotoshop\obj\Release\net9.0-windows\labaphotoshop.AssemblyInfo.cs
+D:\progers\vsreal\labaphotoshop\obj\Release\net9.0-windows\labaphotoshop.csproj.CoreCompileInputs.cache
+D:\progers\vsreal\labaphotoshop\obj\Release\net9.0-windows\labaphotoshop.sourcelink.json
+D:\progers\vsreal\labaphotoshop\obj\Release\net9.0-windows\labaphotoshop.dll
+D:\progers\vsreal\labaphotoshop\obj\Release\net9.0-windows\refint\labaphotoshop.dll
+D:\progers\vsreal\labaphotoshop\obj\Release\net9.0-windows\labaphotoshop.pdb
+D:\progers\vsreal\labaphotoshop\obj\Release\net9.0-windows\labaphotoshop.genruntimeconfig.cache
+D:\progers\vsreal\labaphotoshop\obj\Release\net9.0-windows\ref\labaphotoshop.dll

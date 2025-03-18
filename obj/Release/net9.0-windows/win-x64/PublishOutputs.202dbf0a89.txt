@@ -1,0 +1,6 @@
+D:\progers\vsreal\labaphotoshop\publish\labaphotoshop.pdb
+D:\progers\vsreal\labaphotoshop\publish\D3DCompiler_47_cor3.dll
+D:\progers\vsreal\labaphotoshop\publish\PenImc_cor3.dll
+D:\progers\vsreal\labaphotoshop\publish\vcruntime140_cor3.dll
+D:\progers\vsreal\labaphotoshop\publish\wpfgfx_cor3.dll
+D:\progers\vsreal\labaphotoshop\publish\labaphotoshop.exe

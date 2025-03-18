@@ -1,0 +1,5 @@
+D:\progers\vsreal\labaphotoshop\publish\labaphotoshop.exe
+D:\progers\vsreal\labaphotoshop\publish\labaphotoshop.dll
+D:\progers\vsreal\labaphotoshop\publish\labaphotoshop.deps.json
+D:\progers\vsreal\labaphotoshop\publish\labaphotoshop.runtimeconfig.json
+D:\progers\vsreal\labaphotoshop\publish\labaphotoshop.pdb

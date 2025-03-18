@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "aiSJDOW82J8=",
+  "success": true,
+  "projectFilePath": "D:\\progers\\vsreal\\labaphotoshop\\labaphotoshop.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kolya\\.nuget\\packages\\microsoft.net.illink.tasks\\9.0.0\\microsoft.net.illink.tasks.9.0.0.nupkg.sha512",
+    "C:\\Users\\kolya\\.nuget\\packages\\microsoft.netcore.app.runtime.win-x64\\9.0.0\\microsoft.netcore.app.runtime.win-x64.9.0.0.nupkg.sha512",
+    "C:\\Users\\kolya\\.nuget\\packages\\microsoft.windowsdesktop.app.runtime.win-x64\\9.0.0\\microsoft.windowsdesktop.app.runtime.win-x64.9.0.0.nupkg.sha512",
+    "C:\\Users\\kolya\\.nuget\\packages\\microsoft.aspnetcore.app.runtime.win-x64\\9.0.0\\microsoft.aspnetcore.app.runtime.win-x64.9.0.0.nupkg.sha512",
+    "C:\\Users\\kolya\\.nuget\\packages\\microsoft.netcore.app.crossgen2.win-x64\\9.0.0\\microsoft.netcore.app.crossgen2.win-x64.9.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
