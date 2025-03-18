@@ -87,7 +87,6 @@ namespace labaphotoshop.gradation_transformations
                     });
             }
             Task.WaitAll(curveTasks);
-
             _mainPicture.Image = Funcs.CombineImgs(parts);
         }
 

@@ -9,13 +9,13 @@ namespace labaphotoshop.layers
 {
     internal class LayersImage
     {
-        public static void DrawWithModeByte(Bitmap formingImage, Bitmap workingImage, float opacity, string MODE)
+        public static void DrawWithModeByte(Bitmap formingImage, Layer layer)
         {
-            int height = Math.Min(workingImage.Height, formingImage.Height);
-            int width = Math.Min(workingImage.Width, formingImage.Width);
+            int height = Math.Min(layer.Image.Height, formingImage.Height);
+            int width = Math.Min(layer.Image.Width, formingImage.Width);
 
             BitmapData formingData = formingImage.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.ReadWrite, PixelFormat.Format32bppArgb);
-            BitmapData workingData = workingImage.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
+            BitmapData workingData = layer.Image.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
 
             unsafe
             {
@@ -39,23 +39,23 @@ namespace labaphotoshop.layers
                         byte workingG = workingPtr[workingIndex + 1];
                         byte workingR = workingPtr[workingIndex + 2];
                         //byte workingA = workingPtr[workingIndex + 3];
-
-                        switch (MODE)
+                        
+                        switch (layer.ModeOfMultiply)
                         {
                             case "Sum":
-                                formingPtr[formingIndex] = ClampByte((int)(formingB * (1 - opacity) + workingB * opacity), 0, 255); // B
-                                formingPtr[formingIndex + 1] = ClampByte((int)(formingG * (1 - opacity) + workingG * opacity), 0, 255); // G
-                                formingPtr[formingIndex + 2] = ClampByte((int)(formingR * (1 - opacity) + workingR * opacity), 0, 255); // R
+                                formingPtr[formingIndex] = ClampByte((int)(formingB * (1 - layer.Opacity) + workingB * layer.Opacity), 0, 255); // B
+                                formingPtr[formingIndex + 1] = ClampByte((int)(formingG * (1 - layer.Opacity) + workingG * layer.Opacity), 0, 255); // G
+                                formingPtr[formingIndex + 2] = ClampByte((int)(formingR * (1 - layer.Opacity) + workingR * layer.Opacity), 0, 255); // R
                                 break;
                             case "Multiply":
-                                formingPtr[formingIndex] = ClampByte((int)(formingB * workingB * opacity % 255), 0, 255); // B
-                                formingPtr[formingIndex + 1] = ClampByte((int)(formingG * workingG * opacity % 255), 0, 255); // G
-                                formingPtr[formingIndex + 2] = ClampByte((int)(formingR * workingR * opacity % 255), 0, 255); // R
+                                formingPtr[formingIndex] = ClampByte((int)(formingB * workingB * layer.Opacity % 255), 0, 255); // B
+                                formingPtr[formingIndex + 1] = ClampByte((int)(formingG * workingG * layer.Opacity % 255), 0, 255); // G
+                                formingPtr[formingIndex + 2] = ClampByte((int)(formingR * workingR * layer.Opacity % 255), 0, 255); // R
                                 break;
                             case "Difference":
-                                formingPtr[formingIndex] = ClampByte((int)(formingB - workingB * opacity), 0, 255); // B
-                                formingPtr[formingIndex + 1] = ClampByte((int)(formingG - workingG * opacity), 0, 255); // G
-                                formingPtr[formingIndex + 2] = ClampByte((int)(formingR - workingR * opacity), 0, 255); // R
+                                formingPtr[formingIndex] = ClampByte((int)(formingB - workingB * layer.Opacity), 0, 255); // B
+                                formingPtr[formingIndex + 1] = ClampByte((int)(formingG - workingG * layer.Opacity), 0, 255); // G
+                                formingPtr[formingIndex + 2] = ClampByte((int)(formingR - workingR * layer.Opacity), 0, 255); // R
                                 break;
                             default:
                                 break;
@@ -67,7 +67,7 @@ namespace labaphotoshop.layers
 
             // Разблокируем биты изображения
             formingImage.UnlockBits(formingData);
-            workingImage.UnlockBits(workingData);
+            layer.Image.UnlockBits(workingData);
         }
 
         private static byte ClampByte(int val, int min, int max)
@@ -77,86 +77,5 @@ namespace labaphotoshop.layers
             else return (byte)val;
         }
 
-
-        public static T Clamp<T>(T val, T min, T max) where T : IComparable<T>
-        {
-            if (val.CompareTo(min) < 0) return min;
-            else if (val.CompareTo(max) > 0) return max;
-            else return val;
-        }
-        public static void DrawWithSum(Bitmap formingImage, Bitmap WorkingImage, float opacity)
-        {
-            int height = Math.Min(WorkingImage.Height, formingImage.Height);
-            int width = Math.Min(WorkingImage.Width, formingImage.Width);
-
-            for (int y = 0; y < height; y++)
-            {
-                for (int x = 0; x < width; x++)
-                {
-                    var pixel = WorkingImage.GetPixel(x, y);
-
-                    if (y < formingImage.Height && x < formingImage.Width)
-                    {
-                        Color currentPixel = formingImage.GetPixel(x, y);
-
-                        int r = Clamp((int)(currentPixel.R * (1 - opacity) + pixel.R * opacity), 0, 255);
-                        int g = Clamp((int)(currentPixel.G * (1 - opacity) + pixel.G * opacity), 0, 255);
-                        int b = Clamp((int)(currentPixel.B * (1 - opacity) + pixel.B * opacity), 0, 255);
-
-                        formingImage.SetPixel(x, y, Color.FromArgb(r, g, b));
-                    }
-                }
-            }
-        }
-
-        public static void DrawWithDifference(Bitmap formingImage, Bitmap WorkingImage, float opacity)
-        {
-            int height = Math.Min(WorkingImage.Height, formingImage.Height);
-            int width = Math.Min(WorkingImage.Width, formingImage.Width);
-
-            for (int y = 0; y < height; y++)
-            {
-                for (int x = 0; x < width; x++)
-                {
-                    var pixel = WorkingImage.GetPixel(x, y);
-
-                    if (y < formingImage.Height && x < formingImage.Width)
-                    {
-                        Color currentPixel = formingImage.GetPixel(x, y);
-
-                        int r = Clamp((int)(currentPixel.R - pixel.R * opacity), 0, 255);
-                        int g = Clamp((int)(currentPixel.G - pixel.G * opacity), 0, 255);
-                        int b = Clamp((int)(currentPixel.B - pixel.B * opacity), 0, 255);
-
-                        formingImage.SetPixel(x, y, Color.FromArgb(r, g, b));
-                    }
-                }
-            }
-        }
-
-        public static void DrawWithMultiply(Bitmap formingImage, Bitmap WorkingImage, float opacity)
-        {
-            int height = Math.Min(WorkingImage.Height, formingImage.Height);
-            int width = Math.Min(WorkingImage.Width, formingImage.Width);
-
-            for (int y = 0; y < height; y++)
-            {
-                for (int x = 0; x < width; x++)
-                {
-                    var pixel = WorkingImage.GetPixel(x, y);
-
-                    if (y < formingImage.Height && x < formingImage.Width)
-                    {
-                        Color currentPixel = formingImage.GetPixel(x, y);
-
-                        int r = Clamp((int)(currentPixel.R * pixel.R * opacity) % 255, 0, 255);
-                        int g = Clamp((int)(currentPixel.G * pixel.G * opacity) % 255, 0, 255);
-                        int b = Clamp((int)(currentPixel.B * pixel.B * opacity) % 255, 0, 255);
-
-                        formingImage.SetPixel(x, y, Color.FromArgb(r, g, b));
-                    }
-                }
-            }
-        }
     }
 }

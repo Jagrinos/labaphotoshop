@@ -22,8 +22,6 @@ namespace labaphotoshop.layers
             {
                 DrowLayer(layers[i]);
             }
-
-            
         }
 
         public void RepaintImage()
@@ -32,8 +30,7 @@ namespace labaphotoshop.layers
 
             if (layers.Count == 0)
             {
-                Bitmap defImg = new(Config.DefImgPath);
-                _mainPicture.Image = defImg;
+                CreateLayer(Config.DefImgPath);
                 return;
             }
 
@@ -47,7 +44,7 @@ namespace labaphotoshop.layers
                     case "None":
                         break;
                     default:
-                        LayersImage.DrawWithModeByte(formingImage, layer.Image, layer.Opacity, layer.ModeOfMultiply!);
+                        LayersImage.DrawWithModeByte(formingImage, layer);
                         break;
                 }
             }
