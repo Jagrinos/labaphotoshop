@@ -13,21 +13,23 @@ namespace labaphotoshop.thresholding
         private Label _infoText;
         private PictureBox _mainPicture;
         private Bitmap? _originalImg;
+        private ThresholdingForm _thresholdingForm;
 
         ~ThresholdingFuncs() 
         {
             _originalImg?.Dispose();
         }
 
-        public ThresholdingFuncs(List<RadioButton> buttons, Label infoText, PictureBox mainPicture)
+        public ThresholdingFuncs(ThresholdingForm thresholdingForm, Label infoText, PictureBox mainPicture)
         {
+            _thresholdingForm = thresholdingForm;
             _infoText = infoText;
             _mainPicture = mainPicture;
             if (mainPicture.Image != null) 
             {
                 _originalImg = Funcs.BitmapChangeFormatTo32(new Bitmap(mainPicture.Image));
             }
-            foreach (RadioButton button in buttons) 
+            foreach (RadioButton button in _thresholdingForm.Buttons) 
                 button.CheckedChanged += BinModeChange!;
         }
 
@@ -56,25 +58,25 @@ namespace labaphotoshop.thresholding
                     _mainPicture.Image = img;
                     break;
                 case "Критерий Ниблека":
-                    img = NiblackThresholding(_originalImg!, 3, -0.2);
+                    img = NiblackThresholding(_originalImg!, _thresholdingForm.WindowSize, _thresholdingForm.K);
                     _mainPicture.Image!.Dispose();
                     _mainPicture.Image = img;
                     break;
                 case "Критерий Сауволы":
-                    img = SauvolaThresholding(_originalImg!, 3, 0.2);
+                    img = SauvolaThresholding(_originalImg!, _thresholdingForm.WindowSize, _thresholdingForm.K);
                     _mainPicture.Image!.Dispose();
                     _mainPicture.Image = img;
                     break;
                 case "Критерий Кристиана Вульфа":
-                    img = WolfThresholding(_originalImg!, 3, 0.5);
+                    img = WolfThresholding(_originalImg!, _thresholdingForm.WindowSize, _thresholdingForm.A);
                     _mainPicture.Image!.Dispose();
                     _mainPicture.Image = img;
                     break;
-                case "Критерий Брэдли-Рота":
-                    img = BradleyRothThresholding(_originalImg!, 3, 0.2);
-                    _mainPicture.Image!.Dispose();
-                    _mainPicture.Image = img;
-                    break;
+                //case "Критерий Брэдли-Рота":
+                //    img = BradleyRothThresholding(_originalImg!, 3, 0.2);
+                //    _mainPicture.Image!.Dispose();
+                //    _mainPicture.Image = img;
+                //    break;
                 default:
                     break;
             }
@@ -84,7 +86,7 @@ namespace labaphotoshop.thresholding
             if (sender is RadioButton button && button.Checked)
             {
                 var MODE = button.Text;
-                _infoText.Text = $"Выбран режим: {MODE}";
+                _infoText.Text = $"{MODE}, WS: {_thresholdingForm.WindowSize}, k: {_thresholdingForm.K}, a {_thresholdingForm.A}";
                 BinModes(MODE);
             }
         }
@@ -659,70 +661,71 @@ namespace labaphotoshop.thresholding
             return res;
         }
 
-        public static Bitmap BradleyRothThresholding(Bitmap source, int windowSize, double k)
-        {
-            int width = source.Width;
-            int height = source.Height;
-            Bitmap result = new Bitmap(width, height, PixelFormat.Format32bppArgb);
+        //public static Bitmap BradleyRothThresholding(Bitmap source, int windowSize, double k)
+        //{
+        //    int width = source.Width;
+        //    int height = source.Height;
+        //    Bitmap result = new(width, height, PixelFormat.Format32bppArgb);
 
-            BitmapData srcData = source.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
-            BitmapData resData = result.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
+        //    BitmapData srcData = source.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
+        //    BitmapData resData = result.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.WriteOnly, PixelFormat.Format32bppArgb);
 
-            int bytesPerPixel = 4;
-            int stride = srcData.Stride;
-            int[,] integralImage = new int[width, height];
+        //    int bytesPerPixel = 4;
+        //    int stride = srcData.Stride;
+        //    int[,] integralImage = new int[width, height];
 
-            unsafe
-            {
-                byte* srcPtr = (byte*)srcData.Scan0;
+        //    unsafe
+        //    {
+        //        byte* srcPtr = (byte*)srcData.Scan0;
 
-                Parallel.For(0, height, y =>
-                {
-                    int sum = 0;
-                    for (int x = 0; x < width; x++)
-                    {
-                        byte* pixel = srcPtr + y * stride + x * bytesPerPixel;
-                        byte gray = (byte)(0.2125 * pixel[2] + 0.7154 * pixel[1] + 0.0721 * pixel[0]);
-                        sum += gray;
-                        integralImage[x, y] = sum + (y > 0 ? integralImage[x, y - 1] : 0);
-                    }
-                });
-            }
+        //        Parallel.For(0, height, y =>
+        //        {
+        //            int sum = 0;
+        //            for (int x = 0; x < width; x++)
+        //            {
+        //                byte* pixel = srcPtr + y * stride + x * bytesPerPixel;
+        //                byte gray = (byte)(0.2125 * pixel[2] + 0.7154 * pixel[1] + 0.0721 * pixel[0]);
+        //                sum += gray;
+        //                integralImage[x, y] = sum + (y > 0 ? integralImage[x, y - 1] : 0);
+        //            }
+        //        });
+        //    }
 
-            unsafe
-            {
-                byte* srcPtr = (byte*)srcData.Scan0;
-                byte* resPtr = (byte*)resData.Scan0;
+        //    unsafe
+        //    {
+        //        byte* srcPtr = (byte*)srcData.Scan0;
+        //        byte* resPtr = (byte*)resData.Scan0;
 
-                Parallel.For(0, height, y =>
-                {
-                    for (int x = 0; x < width; x++)
-                    {
-                        int x1 = Math.Max(0, x - windowSize / 2);
-                        int y1 = Math.Max(0, y - windowSize / 2);
-                        int x2 = Math.Min(width - 1, x + windowSize / 2);
-                        int y2 = Math.Min(height - 1, y + windowSize / 2);
+        //        Parallel.For(0, height, y =>
+        //        {
+        //            for (int x = 0; x < width; x++)
+        //            {
+        //                int x1 = Math.Max(0, x - windowSize / 2);
+        //                int y1 = Math.Max(0, y - windowSize / 2);
+        //                int x2 = Math.Min(width - 1, x + windowSize / 2);
+        //                int y2 = Math.Min(height - 1, y + windowSize / 2);
 
-                        int area = (x2 - x1 + 1) * (y2 - y1 + 1);
-                        int sum = integralImage[x2, y2] - (x1 > 0 ? integralImage[x1 - 1, y2] : 0) -
-                                  (y1 > 0 ? integralImage[x2, y1 - 1] : 0) +
-                                  ((x1 > 0 && y1 > 0) ? integralImage[x1 - 1, y1 - 1] : 0);
-                        int threshold = (int)(sum / area * (1.0 - k));
+        //                int area = (x2 - x1 + 1) * (y2 - y1 + 1);
+        //                int sum = integralImage[x2, y2] - (x1 > 0 ? integralImage[x1 - 1, y2] : 0) -
+        //                          (y1 > 0 ? integralImage[x2, y1 - 1] : 0) +
+        //                          ((x1 > 0 && y1 > 0) ? integralImage[x1 - 1, y1 - 1] : 0);
 
-                        byte* srcPixel = srcPtr + y * stride + x * bytesPerPixel;
-                        byte grayVal = (byte)(0.2125 * srcPixel[2] + 0.7154 * srcPixel[1] + 0.0721 * srcPixel[0]);
-                        byte bin = (grayVal <= threshold) ? (byte)0 : (byte)255;
+        //                int threshold = (int)(sum / area * (1.0 - k));
 
-                        byte* resPixel = resPtr + y * stride + x * bytesPerPixel;
-                        resPixel[0] = resPixel[1] = resPixel[2] = bin;
-                        resPixel[3] = 255;
-                    }
-                });
-            }
+        //                byte* srcPixel = srcPtr + y * stride + x * bytesPerPixel;
+        //                byte grayVal = (byte)(0.2125 * srcPixel[2] + 0.7154 * srcPixel[1] + 0.0721 * srcPixel[0]);
+        //                byte bin = (grayVal <= threshold) ? (byte)0 : (byte)255;
 
-            source.UnlockBits(srcData);
-            result.UnlockBits(resData);
-            return result;
-        }
+        //                byte* resPixel = resPtr + y * stride + x * bytesPerPixel;
+        //                resPixel[0] = resPixel[1] = resPixel[2] = bin;
+        //                resPixel[3] = 255;
+        //            }
+        //        });
+        //    }
+
+        //    source.UnlockBits(srcData);
+        //    result.UnlockBits(resData);
+        //    return result;
+        //}
     }
 }
