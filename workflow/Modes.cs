@@ -41,7 +41,7 @@ namespace labaphotoshop.workflow
                     _addImageButton.Visible = false;
                     _flowPanelImages.Controls.Clear();
 
-                    ThresholdingForm thresholdingForm = new(_flowPanelImages);
+                    ThresholdingForm thresholdingForm = new(_flowPanelImages, _infoText);
                     ThresholdingFuncs thresholdingFuncs = new(thresholdingForm, _infoText, _mainPicture);
                     break;
                 default:

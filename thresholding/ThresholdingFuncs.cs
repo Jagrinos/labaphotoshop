@@ -35,10 +35,8 @@ namespace labaphotoshop.thresholding
 
         private void BinModes(string MODE)
         {
-            if (_originalImg == null)
-            {
-                MODE = "NULLIMAGE";
-            }
+            
+            MODE = _originalImg == null ? "NULLIMAGE" : MODE;
             Bitmap img;
             switch (MODE)
             {

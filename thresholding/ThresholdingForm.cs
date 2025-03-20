@@ -10,17 +10,27 @@ namespace labaphotoshop.thresholding
     {
         private FlowLayoutPanel _flowPanelImages;
         public List<RadioButton> Buttons = [];
+        private Label _infoText;
         public int WindowSize { get; set; } = 3;
         public double A { get; set; } = 0.5;
         public double K { get; set; } = 0.2;
 
 
 
-        public ThresholdingForm(FlowLayoutPanel flowPanelImages)
+        public ThresholdingForm(FlowLayoutPanel flowPanelImages, Label infoText)
         {
             _flowPanelImages = flowPanelImages;
+            _infoText = infoText;
 
-            string[] modes = ["Градации серого", "Критерий Гаврилова", "Критерий Отсо", "Критерий Ниблека", "Критерий Сауволы", "Критерий Кристиана Вульфа", "Критерий Брэдли-Рота"];
+            string[] modes = [
+                    "Градации серого",
+                    "Критерий Гаврилова", 
+                    "Критерий Отсо", 
+                    "Критерий Ниблека", 
+                    "Критерий Сауволы", 
+                    "Критерий Кристиана Вульфа", 
+                    //"Критерий Брэдли-Рота"
+                ];
 
             TableLayoutPanel tableLayout = new()
             {
@@ -109,9 +119,14 @@ namespace labaphotoshop.thresholding
                         try
                         {
                             WindowSize = int.Parse(tb.Text);
+                            if (WindowSize % 2 == 0)
+                            {
+                                throw new Exception("Windows size must be not odd");
+                            }
                         }
-                        catch
+                        catch (Exception ex)
                         {
+                            _infoText.Text = ex.Message;
                             WindowSize = 3;
                         }
                         break;
@@ -120,8 +135,9 @@ namespace labaphotoshop.thresholding
                         {
                             A = double.Parse(tb.Text);
                         }
-                        catch
+                        catch (Exception ex)
                         {
+                            _infoText.Text = ex.Message;
                             A = 0.5;
                         }
                         break;
@@ -130,8 +146,9 @@ namespace labaphotoshop.thresholding
                         {
                             K = double.Parse(tb.Text);
                         }
-                        catch
+                        catch (Exception ex)
                         {
+                            _infoText.Text = ex.Message;
                             K = 0.2;
                         }
                         break;

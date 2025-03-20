@@ -13,7 +13,7 @@ namespace labaphotoshop.layers
         public Layer(string filepath)
         {
             Image = Funcs.BitmapChangeFormatTo32(new Bitmap(filepath));
-            ModeOfMultiply = "Sum";
+            ModeOfMultiply = "Normal";
             Opacity = 1.0f; 
         }
 

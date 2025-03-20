@@ -8,23 +8,23 @@
     "net9.0-windows7.0": []
   },
   "packageFolders": {
-    "C:\\Users\\kolya\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\Николай\\.nuget\\packages\\": {},
+    "D:\\learning\\c\\packet\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\progers\\vsreal\\labaphotoshop\\labaphotoshop.csproj",
+      "projectUniqueName": "D:\\progers\\vsr\\labaphotoshop\\labaphotoshop.csproj",
       "projectName": "labaphotoshop",
-      "projectPath": "D:\\progers\\vsreal\\labaphotoshop\\labaphotoshop.csproj",
-      "packagesPath": "C:\\Users\\kolya\\.nuget\\packages\\",
-      "outputPath": "D:\\progers\\vsreal\\labaphotoshop\\obj\\",
+      "projectPath": "D:\\progers\\vsr\\labaphotoshop\\labaphotoshop.csproj",
+      "packagesPath": "C:\\Users\\Николай\\.nuget\\packages\\",
+      "outputPath": "D:\\progers\\vsr\\labaphotoshop\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "D:\\learning\\c\\packet\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\kolya\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Николай\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -49,7 +49,7 @@
       "restoreAuditProperties": {
         "enableAudit": "true",
         "auditLevel": "low",
-        "auditMode": "all"
+        "auditMode": "direct"
       },
       "SdkAnalysisLevel": "9.0.100"
     },
@@ -75,7 +75,7 @@
             "privateAssets": "none"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.100/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.102/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

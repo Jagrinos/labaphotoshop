@@ -16,6 +16,15 @@ namespace labaphotoshop.layers
 
         private List<Layer> layers = [];
 
+        ~LayersForm()
+        {
+            foreach (Layer layer in layers) 
+            {
+                layer.Image.Dispose();
+                layers.Remove(layer);   
+            }
+        }
+
         public void RepaintLayers()
         {
             for (int i = layers.Count - 1; i >= 0; i--) 
@@ -74,7 +83,7 @@ namespace labaphotoshop.layers
             ComboBox cmbMode = new()
             {
                 DropDownStyle = ComboBoxStyle.DropDownList,
-                Items = { "Sum", "Multiply", "None", "Difference" },
+                Items = { "Normal", "Sum", "Multiply", "None", "Difference" },
                 SelectedItem = layer.ModeOfMultiply,
                 Left = 90,
                 Top = 10,
@@ -180,14 +189,6 @@ namespace labaphotoshop.layers
         }
         public void CreateLayer(string filename)
         {
-            //change format
-            //var originalImage = new Bitmap(filename);
-            //var newImage = new Bitmap(originalImage.Width, originalImage.Height, PixelFormat.Format32bppArgb);
-            //using (Graphics g = Graphics.FromImage(newImage))
-            //{
-            //    g.DrawImage(originalImage, 0, 0, originalImage.Width, originalImage.Height);
-            //}
-
             layers.Insert(0, new Layer(filename));
 
             DrowLayer(layers[0]);

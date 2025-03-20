@@ -1,41 +1,45 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\progers\\vsreal\\labaphotoshop\\",
+  "WorkspaceRootPath": "D:\\progers\\vsr\\labaphotoshop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsreal\\labaphotoshop\\thresholding\\thresholdingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:thresholding\\thresholdingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsreal\\labaphotoshop\\layers\\layersimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:layers\\layersimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsreal\\labaphotoshop\\thresholding\\thresholdingfuncs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsr\\labaphotoshop\\thresholding\\thresholdingfuncs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:thresholding\\thresholdingfuncs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsreal\\labaphotoshop\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|D:\\progers\\vsr\\labaphotoshop\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsreal\\labaphotoshop\\layers\\layersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:layers\\layersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsr\\labaphotoshop\\thresholding\\thresholdingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:thresholding\\thresholdingform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsreal\\labaphotoshop\\workflow\\modes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:workflow\\modes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsreal\\labaphotoshop\\gradation transformations\\curve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsr\\labaphotoshop\\gradation transformations\\curve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:gradation transformations\\curve.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsreal\\labaphotoshop\\workflow\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsr\\labaphotoshop\\workflow\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:workflow\\config.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsreal\\labaphotoshop\\gradation transformations\\gradform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsr\\labaphotoshop\\layers\\layersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:layers\\layersform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsr\\labaphotoshop\\layers\\layersimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:layers\\layersimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsr\\labaphotoshop\\layers\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:layers\\layer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsr\\labaphotoshop\\workflow\\modes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:workflow\\modes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsr\\labaphotoshop\\gradation transformations\\gradform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:gradation transformations\\gradform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -46,36 +50,54 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 5,
+          "SelectedChildIndex": 6,
           "Children": [
             {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "Modes.cs",
+              "DocumentMoniker": "D:\\progers\\vsr\\labaphotoshop\\workflow\\Modes.cs",
+              "RelativeDocumentMoniker": "workflow\\Modes.cs",
+              "ToolTip": "D:\\progers\\vsr\\labaphotoshop\\workflow\\Modes.cs",
+              "RelativeToolTip": "workflow\\Modes.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAAAAwCIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-19T16:07:28.586Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
               "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
             },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
             },
             {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Modes.cs",
-              "DocumentMoniker": "D:\\progers\\vsreal\\labaphotoshop\\workflow\\Modes.cs",
-              "RelativeDocumentMoniker": "workflow\\Modes.cs",
-              "ToolTip": "D:\\progers\\vsreal\\labaphotoshop\\workflow\\Modes.cs",
-              "RelativeToolTip": "workflow\\Modes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAABOAAAAAAAAAA==",
+              "DocumentIndex": 7,
+              "Title": "Layer.cs",
+              "DocumentMoniker": "D:\\progers\\vsr\\labaphotoshop\\layers\\Layer.cs",
+              "RelativeDocumentMoniker": "layers\\Layer.cs",
+              "ToolTip": "D:\\progers\\vsr\\labaphotoshop\\layers\\Layer.cs",
+              "RelativeToolTip": "layers\\Layer.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAAA8AAAAkAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-19T16:07:28.586Z",
+              "WhenOpened": "2025-03-20T07:42:20.989Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 1,
               "Title": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
-              "DocumentMoniker": "D:\\progers\\vsreal\\labaphotoshop\\MainForm.cs",
+              "DocumentMoniker": "D:\\progers\\vsr\\labaphotoshop\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
-              "ToolTip": "D:\\progers\\vsreal\\labaphotoshop\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
+              "ToolTip": "D:\\progers\\vsr\\labaphotoshop\\MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "RelativeToolTip": "MainForm.cs [\u041A\u043E\u043D\u0441\u0442\u0440\u0443\u043A\u0442\u043E\u0440]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-19T15:47:56.623Z",
@@ -83,88 +105,89 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "ThresholdingFuncs.cs",
-              "DocumentMoniker": "D:\\progers\\vsreal\\labaphotoshop\\thresholding\\ThresholdingFuncs.cs",
+              "DocumentMoniker": "D:\\progers\\vsr\\labaphotoshop\\thresholding\\ThresholdingFuncs.cs",
               "RelativeDocumentMoniker": "thresholding\\ThresholdingFuncs.cs",
-              "ToolTip": "D:\\progers\\vsreal\\labaphotoshop\\thresholding\\ThresholdingFuncs.cs",
+              "ToolTip": "D:\\progers\\vsr\\labaphotoshop\\thresholding\\ThresholdingFuncs.cs",
               "RelativeToolTip": "thresholding\\ThresholdingFuncs.cs",
-              "ViewState": "AgIAACAAAAAAAAAAAAAcwDcAAAAwAAAAAAAAAA==",
+              "ViewState": "AgIAACkAAAAAAAAAAAAgwC8AAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T19:44:54.964Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "ThresholdingForm.cs",
-              "DocumentMoniker": "D:\\progers\\vsreal\\labaphotoshop\\thresholding\\ThresholdingForm.cs",
+              "DocumentMoniker": "D:\\progers\\vsr\\labaphotoshop\\thresholding\\ThresholdingForm.cs",
               "RelativeDocumentMoniker": "thresholding\\ThresholdingForm.cs",
-              "ToolTip": "D:\\progers\\vsreal\\labaphotoshop\\thresholding\\ThresholdingForm.cs",
+              "ToolTip": "D:\\progers\\vsr\\labaphotoshop\\thresholding\\ThresholdingForm.cs",
               "RelativeToolTip": "thresholding\\ThresholdingForm.cs",
-              "ViewState": "AgIAAGUAAAAAAAAAAAAIwEkAAAAaAAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAHQAAAARAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T19:40:47.076Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 6,
               "Title": "LayersImage.cs",
-              "DocumentMoniker": "D:\\progers\\vsreal\\labaphotoshop\\layers\\LayersImage.cs",
+              "DocumentMoniker": "D:\\progers\\vsr\\labaphotoshop\\layers\\LayersImage.cs",
               "RelativeDocumentMoniker": "layers\\LayersImage.cs",
-              "ToolTip": "D:\\progers\\vsreal\\labaphotoshop\\layers\\LayersImage.cs",
+              "ToolTip": "D:\\progers\\vsr\\labaphotoshop\\layers\\LayersImage.cs",
               "RelativeToolTip": "layers\\LayersImage.cs",
-              "ViewState": "AgIAAAkAAAAAAAAAAAAAAEEAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBwAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-18T11:31:46.498Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "LayersForm.cs",
-              "DocumentMoniker": "D:\\progers\\vsreal\\labaphotoshop\\layers\\LayersForm.cs",
+              "DocumentMoniker": "D:\\progers\\vsr\\labaphotoshop\\layers\\LayersForm.cs",
               "RelativeDocumentMoniker": "layers\\LayersForm.cs",
-              "ToolTip": "D:\\progers\\vsreal\\labaphotoshop\\layers\\LayersForm.cs",
+              "ToolTip": "D:\\progers\\vsr\\labaphotoshop\\layers\\LayersForm.cs",
               "RelativeToolTip": "layers\\LayersForm.cs",
-              "ViewState": "AgIAAFEAAAAAAAAAAAApwHgAAAANAAAAAAAAAA==",
+              "ViewState": "AgIAAAoAAAAAAAAAAAASwA8AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-16T18:32:32.338Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 4,
               "Title": "Config.cs",
-              "DocumentMoniker": "D:\\progers\\vsreal\\labaphotoshop\\workflow\\Config.cs",
+              "DocumentMoniker": "D:\\progers\\vsr\\labaphotoshop\\workflow\\Config.cs",
               "RelativeDocumentMoniker": "workflow\\Config.cs",
-              "ToolTip": "D:\\progers\\vsreal\\labaphotoshop\\workflow\\Config.cs",
+              "ToolTip": "D:\\progers\\vsr\\labaphotoshop\\workflow\\Config.cs",
               "RelativeToolTip": "workflow\\Config.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABIAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAABZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-17T18:56:12.823Z"
+              "WhenOpened": "2025-03-17T18:56:12.823Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 3,
               "Title": "Curve.cs",
-              "DocumentMoniker": "D:\\progers\\vsreal\\labaphotoshop\\gradation transformations\\Curve.cs",
+              "DocumentMoniker": "D:\\progers\\vsr\\labaphotoshop\\gradation transformations\\Curve.cs",
               "RelativeDocumentMoniker": "gradation transformations\\Curve.cs",
-              "ToolTip": "D:\\progers\\vsreal\\labaphotoshop\\gradation transformations\\Curve.cs",
+              "ToolTip": "D:\\progers\\vsr\\labaphotoshop\\gradation transformations\\Curve.cs",
               "RelativeToolTip": "gradation transformations\\Curve.cs",
-              "ViewState": "AgIAAHAAAAAAAAAAAAAcwCQAAAAXAAAAAAAAAA==",
+              "ViewState": "AgIAABkAAAAAAAAAAAAQwC8AAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-17T16:28:25.576Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 9,
               "Title": "GradForm.cs",
-              "DocumentMoniker": "D:\\progers\\vsreal\\labaphotoshop\\gradation transformations\\GradForm.cs",
+              "DocumentMoniker": "D:\\progers\\vsr\\labaphotoshop\\gradation transformations\\GradForm.cs",
               "RelativeDocumentMoniker": "gradation transformations\\GradForm.cs",
-              "ToolTip": "D:\\progers\\vsreal\\labaphotoshop\\gradation transformations\\GradForm.cs",
+              "ToolTip": "D:\\progers\\vsr\\labaphotoshop\\gradation transformations\\GradForm.cs",
               "RelativeToolTip": "gradation transformations\\GradForm.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
