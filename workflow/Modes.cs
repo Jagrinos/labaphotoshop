@@ -7,6 +7,7 @@ using System.Text;
 using System.Threading.Tasks;
 using labaphotoshop.gradation_transformations;
 using labaphotoshop.layers;
+using labaphotoshop.Space_filter;
 using labaphotoshop.thresholding;
 
 namespace labaphotoshop.workflow
@@ -29,7 +30,7 @@ namespace labaphotoshop.workflow
                     _layersForm.RepaintLayers();
                     _layersForm.RepaintImage();
                     break;
-                case "Град. Преоб.":
+                case "Град":
                     _addImageButton.Visible = false;
                     _flowPanelImages.Controls.Clear();
 
@@ -37,12 +38,19 @@ namespace labaphotoshop.workflow
                     Histogram histogram = new(_flowPanelImages, _mainPicture, gradForm.HistogramImg);
                     Curve curve = new(_mainPicture, _infoText, histogram, gradForm.CurveImg);
                     break;
-                case "Бинаризация":
+                case "Бин":
                     _addImageButton.Visible = false;
                     _flowPanelImages.Controls.Clear();
 
                     ThresholdingForm thresholdingForm = new(_flowPanelImages);
                     ThresholdingFuncs thresholdingFuncs = new(thresholdingForm, _infoText, _mainPicture);
+                    break;
+                case "Пр Фильтр":
+                    _addImageButton.Visible = true;
+                    _flowPanelImages.Controls.Clear();
+
+                    SfForm _sfForm = new(_flowPanelImages, _infoText, _mainPicture);
+
                     break;
                 default:
                     break;

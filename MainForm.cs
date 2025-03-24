@@ -6,6 +6,7 @@ using System.Windows.Forms;
 using labaphotoshop.gradation_transformations;
 using labaphotoshop.layers;
 using labaphotoshop.workflow;
+using Microsoft.VisualBasic.Devices;
 
 namespace labaphotoshop
 {
@@ -28,19 +29,22 @@ namespace labaphotoshop
             CreateModeSelectionButtons();
         }
 
+        //filter
+
+        
+
         //mode
         private void CreateModeSelectionButtons()
         {
-            string[] modes = ["Cлои", "Град. Преоб.", "Бинаризация"];
-            
+            string[] modes = ["Cлои", "Град", "Бин", "Пр Фильтр"];
 
-            TableLayoutPanel tableLayout = new TableLayoutPanel
+            TableLayoutPanel tableLayout = new()
             {
                 Dock = DockStyle.Fill, 
                 ColumnCount = modes.Length,
                 RowCount = 1,
                 AutoSize = true,
-                AutoSizeMode = AutoSizeMode.GrowAndShrink
+                AutoSizeMode = AutoSizeMode.GrowAndShrink 
             };
 
             for (int i = 0; i < modes.Length; i++) {
@@ -53,7 +57,7 @@ namespace labaphotoshop
                 };
 
                 button.CheckedChanged += ModeSelectionChanged!;
-                tableLayout.Controls.Add(button, i, 0);                
+                tableLayout.Controls.Add(button, i,0);                
             }
             Modes.Controls.Add(tableLayout);
         }
@@ -65,6 +69,7 @@ namespace labaphotoshop
                 _modes.SetProcessingMode(selectedMode);
                 InfoText.Text = $"Выбран режим: {selectedMode}";
             }
+
         }
         
         //layers
