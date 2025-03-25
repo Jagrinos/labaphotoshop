@@ -28,9 +28,6 @@ namespace labaphotoshop
             _layersForm.CreateLayer(Config.DefImgPath);
             CreateModeSelectionButtons();
         }
-
-        //filter
-
         
 
         //mode

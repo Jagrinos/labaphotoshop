@@ -66,16 +66,20 @@ namespace labaphotoshop.Space_filter
             return res;
         }
 
-        public static Bitmap ApplyMedianFilter(Bitmap source, double[,] matrix)
+        public static Bitmap ApplyMedianFilter(Bitmap source, int mHeight, int mWidth)
         {
             int width = source.Width;
             int height = source.Height;
-            int mWidth = matrix.GetLength(1);
-            int mHeight = matrix.GetLength(0);
+           
             int mSize = mWidth * mHeight;
-
-
+           
             Bitmap res = new(width, height, PixelFormat.Format32bppArgb);
+            if (mWidth > width || mHeight > height)
+            {
+                res.Dispose();
+                res = new Bitmap(source);
+                return res;
+            }
 
             var srcData = source.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.ReadOnly, PixelFormat.Format32bppArgb);
             var resData = res.LockBits(new Rectangle(0, 0, width, height), ImageLockMode.ReadWrite, PixelFormat.Format32bppArgb);
@@ -132,6 +136,25 @@ namespace labaphotoshop.Space_filter
 
 
             return res;
+        }
+
+        public static double[,] GenerateGaussianMatrix(int size, double sigma, out double sum)
+        {
+            double[,] kernel = new double[size, size];
+            double sigSqr2 = sigma * sigma * 2;
+            double sigSqrPi = sigSqr2 * Math.PI;
+            int r = size / 2;
+            sum = 0;
+
+            for (int y = -r; y <= r; y++)
+                for (int x = -r; x <= r; x++)
+                {
+                    double value = Math.Exp(-(x * x + y * y) / sigSqr2) / sigSqrPi;
+                    kernel[y + r, x + r] = value;
+                    sum += value;
+                }
+
+            return kernel;
         }
     }
 }

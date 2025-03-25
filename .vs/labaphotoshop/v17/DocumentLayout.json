@@ -3,10 +3,6 @@
   "WorkspaceRootPath": "D:\\progers\\vsreal\\labaphotoshop\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsreal\\labaphotoshop\\space filter\\sfform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:space filter\\sfform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsreal\\labaphotoshop\\mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:mainform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -17,6 +13,10 @@
     {
       "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsreal\\labaphotoshop\\space filter\\sffuncs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:space filter\\sffuncs.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|d:\\progers\\vsreal\\labaphotoshop\\space filter\\sfform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5D3CA791-80F9-49B8-BD24-5F50307103A8}|labaphotoshop.csproj|solutionrelative:space filter\\sfform.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -26,7 +26,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,51 +39,51 @@
             {
               "$type": "Document",
               "DocumentIndex": 3,
+              "Title": "SfForm.cs",
+              "DocumentMoniker": "D:\\progers\\vsreal\\labaphotoshop\\Space filter\\SfForm.cs",
+              "RelativeDocumentMoniker": "Space filter\\SfForm.cs",
+              "ToolTip": "D:\\progers\\vsreal\\labaphotoshop\\Space filter\\SfForm.cs",
+              "RelativeToolTip": "Space filter\\SfForm.cs",
+              "ViewState": "AgIAAJ0AAAAAAAAAAAApwL0AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-03-25T11:54:43.083Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "SfFuncs.cs",
               "DocumentMoniker": "D:\\progers\\vsreal\\labaphotoshop\\Space filter\\SfFuncs.cs",
               "RelativeDocumentMoniker": "Space filter\\SfFuncs.cs",
               "ToolTip": "D:\\progers\\vsreal\\labaphotoshop\\Space filter\\SfFuncs.cs",
               "RelativeToolTip": "Space filter\\SfFuncs.cs",
-              "ViewState": "AgIAAEkAAAAAAAAAAAAIwFUAAAA0AAAAAAAAAA==",
+              "ViewState": "AgIAADUAAAAAAAAAAAAkwEoAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T20:47:20.104Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SfForm.cs",
-              "DocumentMoniker": "D:\\progers\\vsreal\\labaphotoshop\\Space filter\\SfForm.cs",
-              "RelativeDocumentMoniker": "Space filter\\SfForm.cs",
-              "ToolTip": "D:\\progers\\vsreal\\labaphotoshop\\Space filter\\SfForm.cs",
-              "RelativeToolTip": "Space filter\\SfForm.cs",
-              "ViewState": "AgIAAJAAAAAAAAAAAAAMwKkAAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-03-24T20:21:13.45Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
               "Title": "Modes.cs",
               "DocumentMoniker": "D:\\progers\\vsreal\\labaphotoshop\\workflow\\Modes.cs",
               "RelativeDocumentMoniker": "workflow\\Modes.cs",
               "ToolTip": "D:\\progers\\vsreal\\labaphotoshop\\workflow\\Modes.cs",
               "RelativeToolTip": "workflow\\Modes.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAowDMAAABSAAAAAAAAAA==",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAIwDMAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T18:48:53.725Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 0,
               "Title": "MainForm.cs",
               "DocumentMoniker": "D:\\progers\\vsreal\\labaphotoshop\\MainForm.cs",
               "RelativeDocumentMoniker": "MainForm.cs",
               "ToolTip": "D:\\progers\\vsreal\\labaphotoshop\\MainForm.cs",
               "RelativeToolTip": "MainForm.cs",
-              "ViewState": "AgIAABMAAAAAAAAAAAAgwEUAAABAAAAAAAAAAA==",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAowB4AAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-03-24T17:11:02.58Z",
               "EditorCaption": ""
