@@ -40,7 +40,7 @@
             // 
             MainPicture.Location = new Point(6, 6);
             MainPicture.Name = "MainPicture";
-            MainPicture.Size = new Size(912, 804);
+            MainPicture.Size = new Size(900, 800);
             MainPicture.TabIndex = 0;
             MainPicture.TabStop = false;
             // 

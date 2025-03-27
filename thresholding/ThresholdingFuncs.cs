@@ -25,6 +25,7 @@ namespace labaphotoshop.thresholding
             _thresholdingForm = thresholdingForm;
             _infoText = infoText;
             _mainPicture = mainPicture;
+
             if (mainPicture.Image != null) 
             {
                 _originalImg = Funcs.BitmapChangeFormatTo32(new Bitmap(mainPicture.Image));
@@ -549,7 +550,7 @@ namespace labaphotoshop.thresholding
                 {
                     for (int x = 0; x < width; x++)
                     {
-                        int srcIndex, resIndex;
+                        int srcIndex;
                         byte b, g, r, gray;
 
                         //calculate M(x) and M(x^2)

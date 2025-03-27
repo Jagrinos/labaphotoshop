@@ -1,12 +1,6 @@
-using System.Drawing.Imaging;
-using System.Net.Sockets;
-using System.Reflection.Emit;
-using System.Runtime.InteropServices;
-using System.Windows.Forms;
-using labaphotoshop.gradation_transformations;
 using labaphotoshop.layers;
 using labaphotoshop.workflow;
-using Microsoft.VisualBasic.Devices;
+
 
 namespace labaphotoshop
 {
@@ -20,7 +14,7 @@ namespace labaphotoshop
             //layers
             _layersForm = new(FlowPanelImages, InfoText, MainPicture);
 
-            _modes = new(FlowPanelImages, AddImageButton, MainPicture, _layersForm, InfoText);
+            _modes = new(FlowPanelImages, AddImageButton, MainPicture, _layersForm, InfoText, this);
 
             MainPicture.SizeMode = PictureBoxSizeMode.StretchImage;
             InfoText.Text = "";
@@ -28,12 +22,12 @@ namespace labaphotoshop
             _layersForm.CreateLayer(Config.DefImgPath);
             CreateModeSelectionButtons();
         }
-        
+        //wash me 30 45
 
         //mode
         private void CreateModeSelectionButtons()
         {
-            string[] modes = ["Cлои", "Град", "Бин", "Пр Фильтр"];
+            string[] modes = ["Cлои", "Град", "Бин", "Простр. Флтр", "Частотная Флтр"];
 
             TableLayoutPanel tableLayout = new()
             {

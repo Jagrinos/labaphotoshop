@@ -274,6 +274,7 @@ namespace labaphotoshop.Space_filter
                 case "Линейная фильтрация":
                     _infoText.Text = "loading...";
                     Application.DoEvents();
+
                     sw = Stopwatch.StartNew();
 
                     newImg = SfFuncs.ApplyLinearFilter(_mainImage, _matrix);
